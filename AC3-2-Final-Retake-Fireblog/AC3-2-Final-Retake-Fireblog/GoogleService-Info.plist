@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>364727693107-qf28li81tejcvfnm4k8ni620jejigogh.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.364727693107-qf28li81tejcvfnm4k8ni620jejigogh</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDXiwWL3GNaX6XJgkgUUOetuyhHkCikB7c</string>
+	<key>GCM_SENDER_ID</key>
+	<string>364727693107</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>nyc.c4q.AC3-2-Final-Retake-Fireblog</string>
+	<key>PROJECT_ID</key>
+	<string>ac-32-final-retake</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ac-32-final-retake.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:364727693107:ios:7416b1fe2e7c3562</string>
+	<key>DATABASE_URL</key>
+	<string>https://ac-32-final-retake.firebaseio.com</string>
+</dict>
+</plist>

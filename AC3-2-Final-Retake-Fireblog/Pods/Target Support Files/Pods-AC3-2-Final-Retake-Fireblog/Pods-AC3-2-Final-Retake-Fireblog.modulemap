@@ -1,0 +1,6 @@
+framework module Pods_AC3_2_Final_Retake_Fireblog {
+  umbrella header "Pods-AC3-2-Final-Retake-Fireblog-umbrella.h"
+
+  export *
+  module * { export * }
+}
