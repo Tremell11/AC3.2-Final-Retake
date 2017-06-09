@@ -7,15 +7,47 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
+    fileprivate var _authHandle: FIRAuthStateDidChangeListenerHandle!
+    
+    var user: FIRUser?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        FIRApp.configure()
+        
+        _authHandle = FIRAuth.auth()?.addStateDidChangeListener({ (auth: FIRAuth?, user: FIRUser?) in
+            if user != nil {
+                //present main app
+                let feedController = UINavigationController(rootViewController: FeedViewController())
+                let postController = UINavigationController(rootViewController: PostViewController())
+                
+                let tabBarController = UITabBarController()
+                let controllers = [feedController, postController]
+                tabBarController.viewControllers = controllers
+                
+                feedController.tabBarItem = UITabBarItem(title: "Feed", image: #imageLiteral(resourceName: "first"), tag: 0)
+                postController.tabBarItem = UITabBarItem(title: "Post", image: #imageLiteral(resourceName: "second"), tag: 1)
+                
+                self.window = UIWindow(frame: UIScreen.main.bounds)
+                self.window?.rootViewController = tabBarController
+                self.window?.makeKeyAndVisible()
+            } else {
+                //present login vc
+                let loginController = LoginViewController()
+                self.window = UIWindow(frame: UIScreen.main.bounds)
+                self.window?.rootViewController = loginController
+                self.window?.makeKeyAndVisible()
+            }
+        })
+        
         return true
     }
 
